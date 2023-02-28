@@ -60,8 +60,8 @@ void dtAdd(struct dailytemp *dt, int tmp){
 */
 void dtStat(struct dailytemp *dt){
     int sum = 0;
-    int max = 0;
-    int min = 0;
+    int max = -50;
+    int min = 50;
     for(int i = 0; i < dt->hour; i++){
         if(dt->temp[i] > max){
             max = dt->temp[i];

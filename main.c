@@ -24,6 +24,14 @@ struct dailytemp {
     int avg;
 };
 
+/**
+ * @brief This function initializes the struct dailytemp
+ * 
+ * All the values of the struct are set to 0, allocating the memory for the array temp
+ * that stores all the temperatures during the day (24 hours limit).
+ * 
+ * \param dt This is the structure that will be initialized.
+*/
 void dtInit(struct dailytemp *dt) {
     dt->hour = 0;
     for(int i = 0; i<24; i++){

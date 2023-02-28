@@ -29,7 +29,7 @@ struct dailytemp {
  * All the values of the struct are set to 0, allocating the memory for the array temp
  * that stores all the temperatures during the day (24 hours limit).
  * 
- * \param dt This is the structure that will be initialized.
+ * @param dt This is the structure that will be initialized.
 */
 void dtInit(struct dailytemp *dt) {
     dt->hour = 0;
@@ -48,6 +48,15 @@ void dtAdd(struct dailytemp *dt, int tmp){
     }
 }
 
+/**
+ * @brief This function calculates the max, min and avg temperatures during the day, displaying them.
+ * 
+ * The function will navegates through the array temp until reaching the last hour inserted
+ * calculating the max, min and avg temperatures.
+ * 
+ * @param dt This is the structure that will be used for the math, later to be displayed.
+ * 
+*/
 void dtStat(struct dailytemp *dt){
     int sum = 0;
     int max = 0;

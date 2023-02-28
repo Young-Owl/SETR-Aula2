@@ -1,0 +1,97 @@
+\hypertarget{main_8c}{}\doxysection{main.\+c File Reference}
+\label{main_8c}\index{main.c@{main.c}}
+
+
+\mbox{\hyperlink{main_8c}{main.\+c}} Store temperatures during a day and calculate max, min and average temperature  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for main.\+c\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdailytemp}{dailytemp}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a8bd052943003b91e849850a3dfabe01b}{dt\+Init}} (struct \mbox{\hyperlink{structdailytemp}{dailytemp}} $\ast$dt)
+\begin{DoxyCompactList}\small\item\em This function initializes the struct dailytemp. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_a4aa7e303173ef8f4e320486a41a5fadf}\label{main_8c_a4aa7e303173ef8f4e320486a41a5fadf}} 
+void {\bfseries dt\+Add} (struct \mbox{\hyperlink{structdailytemp}{dailytemp}} $\ast$dt, int tmp)
+\item 
+void \mbox{\hyperlink{main_8c_ae868daeb1374145aaa694e06c44a2fad}{dt\+Stat}} (struct \mbox{\hyperlink{structdailytemp}{dailytemp}} $\ast$dt)
+\begin{DoxyCompactList}\small\item\em This function calculates the max, min and avg temperatures during the day, displaying them. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em Experimental main for temperatures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{main_8c}{main.\+c}} Store temperatures during a day and calculate max, min and average temperature 
+
+This file, have a data struct, 3 functions to control a temperatures during a day and the main
+
+\begin{DoxyAuthor}{Author}
+Gonçalo Soares \& Gonçalo Rodrigues 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28 February 2023 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000001}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a8bd052943003b91e849850a3dfabe01b}\label{main_8c_a8bd052943003b91e849850a3dfabe01b}} 
+\index{main.c@{main.c}!dtInit@{dtInit}}
+\index{dtInit@{dtInit}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{dtInit()}{dtInit()}}
+{\footnotesize\ttfamily void dt\+Init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdailytemp}{dailytemp}} $\ast$}]{dt }\end{DoxyParamCaption})}
+
+
+
+This function initializes the struct dailytemp. 
+
+All the values of the struct are set to 0, allocating the memory for the array temp that stores all the temperatures during the day (24 hours limit).
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & This is the structure that will be initialized. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8c_ae868daeb1374145aaa694e06c44a2fad}\label{main_8c_ae868daeb1374145aaa694e06c44a2fad}} 
+\index{main.c@{main.c}!dtStat@{dtStat}}
+\index{dtStat@{dtStat}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{dtStat()}{dtStat()}}
+{\footnotesize\ttfamily void dt\+Stat (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdailytemp}{dailytemp}} $\ast$}]{dt }\end{DoxyParamCaption})}
+
+
+
+This function calculates the max, min and avg temperatures during the day, displaying them. 
+
+The function will navegates through the array temp until reaching the last hour inserted calculating the max, min and avg temperatures.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & This is the structure that will be used for the math, later to be displayed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Experimental main for temperatures. 
+
+Inicialization the temperature struct, add 4 values and print max,min and average temparutre ~\newline
+
+
+\begin{DoxyReturn}{Returns}
+return \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main()}} always 0 
+\end{DoxyReturn}

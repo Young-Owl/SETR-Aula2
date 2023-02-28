@@ -1,17 +1,16 @@
 // Main File for the project
 
 /** @file main.c
- * @brief main.c file brief decription 
+ * @brief main.c Store temperatures during a day
  *
- * Follows the detailed description of main.c. It is separated from 
- * the brief one by a blank line.
- * In this case main.c is the file that contains the main() function. 
+ * This file, have a data struct and 3 functions to control a temperatures during a day
  * 
- * @author Paulo Pedreiras
- * @date 3 March 2022
+ * @author Gonçalo Soares & Gonçalo Rodrigues
+ * @date 28 Februery 2023
  * @bug No known bugs.
  */
 
+/* Includes */
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>

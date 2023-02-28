@@ -41,4 +41,21 @@ void dtAdd(struct dailytemp *dt, int tmp){
     }
 }
 
-void dtState(struct dailytemp *dt);
+void dtStat(struct dailytemp *dt){
+    int sum = 0;
+    int max = 0;
+    int min = 0;
+    for(int i = 0; i < dt->hour; i++){
+        if(dt->temp[i] > max){
+            max = dt->temp[i];
+        }
+        if(dt->temp[i] < min){
+            min = dt->temp[i];
+        }
+        sum += dt->temp[i];
+    }
+    dt->max = max;
+    dt->min = min;
+    dt->avg = sum/dt->hour;
+    printf("Max: %d, Min: %d, Avg: %d\n", dt->max, dt->min, dt->avg);
+}

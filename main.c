@@ -1,14 +1,15 @@
 // Main File for the project
 
 /** @file main.c
- * @brief main.c Store temperatures during a day
+ * @brief main.c Store temperatures during a day and calculate max, min and average temperature
  *
- * This file, have a data struct and 3 functions to control a temperatures during a day
+ * This file, have a data struct, 3 functions to control a temperatures during a day and the main
  * 
  * @author Gonçalo Soares & Gonçalo Rodrigues
- * @date 28 Februery 2023
+ * @date 28 February 2023
  * @bug No known bugs.
  */
+
 
 /* Includes */
 #include <stdlib.h>
@@ -57,4 +58,27 @@ void dtStat(struct dailytemp *dt){
     dt->min = min;
     dt->avg = sum/dt->hour;
     printf("Max: %d, Min: %d, Avg: %d\n", dt->max, dt->min, dt->avg);
+}
+
+/**
+ * @brief Experimental main for temperatures 
+ * 
+ * Inicialization the temperature struct, add 4 values and 
+ * print max,min and average temparutre  
+ * 
+ * @return return main() always 0
+*/
+
+int main(void){
+    struct dailytemp temperatures;
+    dtInit(&temperatures);
+
+    dtAdd(&temperatures,20);
+    dtAdd(&temperatures,14);
+    dtAdd(&temperatures,60);
+    dtAdd(&temperatures,-54);
+
+    dtStat(&temperatures);
+
+    return 0;
 }
